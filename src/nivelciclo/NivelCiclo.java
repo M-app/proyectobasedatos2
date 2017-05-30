@@ -1,12 +1,15 @@
 package nivelciclo;
 
 import java.util.Collection;
+import nivel.NivelDTO;
 
 public interface NivelCiclo {
     
     void insertarNivelCiclo(NivelCicloDTO nivelCiclo);
     
-    Collection<NivelCicloDTO> getNiveles();
+    NivelCicloDTO getNivelCiclo(int idNivelCiclo);
     
-    Collection<NivelCicloDTO> getNivelesPorCiclo(int idCiclo);
+    Collection<NivelCicloDTO> getNivelesCiclos();
+    
+    Collection<NivelDTO> getNivelesPorCiclo(int idCiclo);
 }
