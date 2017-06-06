@@ -16,6 +16,15 @@ public class Conexion {
         //jdbc:sqlserver://aislamiento.database.windows.net:1433;database=colegio;user=upvhas@aislamiento;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
         Connection connection = null;
         
+        private static Conexion ourInstance = new Conexion();
+
+        public static Conexion getInstance() {
+            return ourInstance;
+        }
+
+        private Conexion() {
+        }
+        
        public void conectar(){
          try {
              connection = DriverManager.getConnection(url);
@@ -30,4 +39,9 @@ public class Conexion {
              Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
          }
        }
+       
+       public Connection getConexion()
+        {
+            return connection;
+        }
 }

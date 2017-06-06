@@ -1,5 +1,6 @@
 
 import db.Conexion;
+import nivel.view.Nivel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -17,8 +18,9 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Conexion conexion = new Conexion();
+        Conexion conexion = Conexion.getInstance();
         conexion.conectar();
+        
     }
     
 }
