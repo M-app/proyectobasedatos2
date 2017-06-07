@@ -24,4 +24,9 @@ public class NivelDTO {
     public void setNivel(String nivel) {
         this.nivel = nivel;
     }
+    
+    @Override
+    public String toString(){
+        return String.valueOf(getIdNivel()) + "---" + getNivel();
+    }
 }
