@@ -7,16 +7,18 @@ public class AlumnoDTO {
     private String fechaNacimiento;
     private String genero;
     private String telefono;
+    private String direccion;
     private int idEncargado;
     private String estatus;
 
-    public AlumnoDTO(int idAlumno, String apellidos, String nombres, String fechaNacimiento, String genero, String telefono, int idEncargado, String estatus) {
+    public AlumnoDTO(int idAlumno, String apellidos, String nombres, String fechaNacimiento, String genero, String telefono, String direccion, int idEncargado, String estatus) {
         this.idAlumno = idAlumno;
         this.apellidos = apellidos;
         this.nombres = nombres;
         this.fechaNacimiento = fechaNacimiento;
         this.genero = genero;
         this.telefono = telefono;
+        this.direccion = direccion;
         this.idEncargado = idEncargado;
         this.estatus = estatus;
     }
@@ -67,6 +69,13 @@ public class AlumnoDTO {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public int getIdEncargado() {
